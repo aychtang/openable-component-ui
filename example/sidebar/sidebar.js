@@ -1,7 +1,7 @@
-var SideBar = require('../SideBar');
+var Openable = require('../../Openable');
 
 var container = document.querySelector('.side-bar');
 var tab = document.querySelector('.bar-left', container);
 
-window.sideBar = new SideBar(container, tab);
+window.sideBar = new Openable(container, tab);
 sideBar.init();

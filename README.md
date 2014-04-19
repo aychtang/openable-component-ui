@@ -1,4 +1,5 @@
-sidebar-ui
+openable-component-ui
 ==========
 
-Module that handles state and dom for toggling hideable/showable sidebar.
+Extendable module that handles state and dom for toggling openable components
+such as tabs, dropdowns or show/hideable sidebars.
