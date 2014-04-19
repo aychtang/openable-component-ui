@@ -1,4 +1,4 @@
-// Module for toggling hideable/showable sidebar state.
+// Module that handles state and dom for toggling hideable/showable sidebar.
 // Container el should be passed as el to container.
 // Visible tab or open button should be passed as tab to constructor.
 
@@ -8,7 +8,7 @@ var SideBar = function(el, tab) {
 	this.el = el;
 	this.tab = tab;
 	this.cl = classlist(el);
-	this.open = false;
+	this.isOpen = false;
 };
 
 SideBar.prototype.init = function() {
@@ -18,13 +18,23 @@ SideBar.prototype.init = function() {
 	});
 };
 
-SideBar.prototype.toggle = function() {
-	this.cl.toggle('open');
-	this.open = !this.open;
+SideBar.prototype.open = function() {
+	this.cl.add('open');
+	this.isOpen = true;
 };
 
-SideBar.prototype.isOpen = function() {
-	return this.open;
+SideBar.prototype.close = function() {
+	this.cl.remove('open');
+	this.isOpen = false;
+};
+
+SideBar.prototype.toggle = function() {
+	this.cl.toggle('open');
+	this.isOpen = !this.isOpen;
+};
+
+SideBar.prototype.isOpened = function() {
+	return this.isOpen;
 };
 
 module.exports = SideBar;
