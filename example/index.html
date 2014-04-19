@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello World</title>
+    <style>
+        .side-bar {
+            width: 300px;
+            position: fixed;
+            height: 100%;
+            right: -280px;
+            top: 0;
+            background-color: rgb(235, 235, 235);
+            transition: right 0.05s ease-out;
+        }
+        .bar-left:hover {
+            cursor: pointer;
+        }
+        .side-bar:hover {
+            right: -275px;
+        }
+        .side-bar.open {
+            right: 0;
+        }
+        .bar-left {
+            background-color: rgb(245, 245, 245);
+            width: 25px;
+            height: 100%;
+        }
+        .bar-right {
+            width: 280px;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello, World!</h1>
+    <div class="side-bar">
+        <div class="bar-left">
+            <div>o</div>
+            <div>p</div>
+            <div>e</div>
+            <div>n</div>
+        </div>
+        <div class="bar-right">
+        </div>
+    </div>
+    <script src="client.js"></script>
+</body>
+</html>
